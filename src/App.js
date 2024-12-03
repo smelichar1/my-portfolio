@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Header from './components/Header';
+import Projects from './components/Projects';
+import Pricing from './components/Pricing';
+import Contact from './components/Contact';
+import Navbar from './components/Navbar';
+import Omne from './components/omne'; // Import the Omně component
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n'; // Import konfigurace pro i18next
+import Cursor from './components/Cursor'; // Importujeme Cursor komponentu
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <I18nextProvider i18n={i18n}>
+      <div className="App">
+        <Cursor /> {/* Přidáme kurzor komponentu */}
+        <Navbar />
+        <Header />
+        <Omne />
+        <Projects />
+        <Pricing />
+        <Contact />
+      </div>
+    </I18nextProvider>
   );
 }
 

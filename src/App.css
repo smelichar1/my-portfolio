@@ -1,38 +1,696 @@
-.App {
-  text-align: center;
+/* Reset a základní stylizace pro tělo */
+* {
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Celkový layout */
+body {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  background-color: #121212; /* Tmavé pozadí */
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'), url('https://www.transparenttextures.com/patterns/asphalt.png'); /* Textury pozadí */
+  background-size: 300px;
+  background-position: center center;
+  background-repeat: repeat;
+  animation: movingBackground 10s linear infinite; /* Efekt hýbající textury */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Animace pro hýbající texturu */
+@keyframes movingBackground {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 300px 300px, -300px -300px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Animace pro pohybující se kód */
+@keyframes movingText {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+/* Navbar */
+/* Hlavní navigace */
+/* Hlavní navigace */
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(135deg, #333333, #222222);
+  color: white;
+  padding: 10px 20px;
+  z-index: 1000;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   display: flex;
-  flex-direction: column;
+  justify-content: space-between; /* Rozdělí navbar na dvě části: levý a pravý okraj */
+  align-items: center; /* Zarovná položky na střed výšky */
+}
+
+/* Navbar seznam položek */
+.navbar ul {
+  display: flex;
+  justify-content: flex-start; /* Zarovnání položek na levý okraj */
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Styl pro jednotlivé položky */
+.navbar li {
+  margin: 0 25px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar li:hover {
+  transform: scale(1.1);
+  background-color: rgba(0, 255, 0, 0.1);
+  cursor: pointer;
+}
+
+/* Odkazy v navbaru */
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #00ff00;
+  color: #1a1a1a;
+  cursor: pointer;
+}
+
+.navbar a.active {
+  background-color: #00ff00;
+  color: #1a1a1a;
+}
+
+/* Styl pro jazykový přepínač */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Zarovnání jazykového přepínače na pravý okraj */
+}
+
+.language-switcher button {
+  background-color: transparent;
+  border: none;
+  color: #00ff00;
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.language-switcher button:hover {
+  color: #1a1a1a;
+  transform: scale(1.1);
+}
+
+.language-switcher span {
+  color: #00ff00;
+  font-size: 1.3rem;
+  margin: 0 5px;
+}
+
+/* Zajištění animace pro jazyková tlačítka */
+.language-switcher button:focus {
+  outline: none;
+  border-bottom: 2px solid #00ff00;
+}
+
+
+/* Header */
+/* Header */
+.header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between; /* Space between left and right sections */
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding: 0 30px;
+}
+
+/* Levá část (text) */
+.left-side {
+  flex: 1;
+  text-align: left;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.typing-container h1 {
+  font-size: 4rem;
+  color: #00ff00;
+  font-weight: 600;
+  text-shadow: 0 0 2px rgba(0, 255, 0, 0.7), 0 0 40px rgba(0, 255, 0, 0.7);
+  animation: typing 4s steps(30) 1s forwards, blink 0.75s step-end infinite;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.description {
+  font-size: 1.3rem;
+  margin-top: 20px;
+  color: #ccc;
+  max-width: 900px;
+  text-align: left;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 0.5s;
+  padding: 0 20px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  font-size: 1rem;
+  color: #aaa;
+  animation: fadeIn 2s ease-out forwards;
+  animation-delay: 5s;
+}
+
+/* Pulzující efekt pro kolečko */
+.header::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 110px;
+  width: 587px; /* Zvýšení velikosti pulzujícího kruhu */
+  height: 587px; /* Zvýšení velikosti pulzujícího kruhu */
+  background-color: rgba(0, 255, 0, 0.1);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  animation: pulse 4s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateY(-50%) scale(1);
+    opacity: 0.4;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-50%) scale(1.2);
+    opacity: 0.6;
   }
+  100% {
+    transform: translateY(-50%) scale(1);
+    opacity: 0.4;
+  }
+}
+
+/* Pravá část (obrázek obličeje) */
+.right-side {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  width: 700px;  /* Velikost pulzujícího kruhu */
+  height: 700px; /* Velikost pulzujícího kruhu */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-50%);
+}
+
+.profile-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px; /* Velikost obrázku v kruhu */
+  height: 600px; /* Velikost obrázku v kruhu */
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid #00ff00;  /* Zelený okraj */
+  box-shadow: 0 0 15px rgba(0, 255, 0, 0.7); /* Zelený stín */
+  transform: translate(-50%, -50%); /* Umístění do středu */
+}
+
+.profile-circle img {
+  
+  width: 70%;
+  height: 120%;
+  object-fit: cover; /* Aby byl obrázek správně oříznut */
+  transform: translateX(0px);
+}
+
+/* Animace pro fade-in popisu */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* Projects */
+/* Projects Section */
+/* Sekce projektů */
+/* Styling pro sekci projektů */
+.section-projects {
+
+  margin-top: -70px;
+  padding: 70px 20px;
+  background-color: transparent;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Sekce je skrytá při načítání */
+  transition: opacity 1s ease-in-out; /* Plynulý přechod */
+}
+
+.section-projects.visible {
+  opacity: 1; /* Zobrazení sekce */
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: #00ff00;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Popis projektu */
+.project-card p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* Extra info sekce */
+.extra-info {
+  margin-top: 40px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+}
+
+.extra-info h3 {
+  font-size: 2rem;
+  color: #00ff00;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.extra-info p {
+  font-size: 1.125rem;
+  color: #ccc;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+/* Projekty Grid */
+.projects-grid {
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Project Cards */
+.project-card {
+  background-color: #333333;
+  padding: 20px;
+  width: 300px; /* Můžeš upravit šířku */
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 15px 0;
+}
+
+.project-card img {
+  width: 250px; /* Pevná šířka obrázku */
+  height: 250px; /* Pevná výška obrázku */
+  object-fit: cover; /* Zachová proporce a vyplní rozměr */
+  border-radius: 8px; /* Zaoblení rohů */
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  color: #00ff00;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Hover efekt */
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 255, 0, 0.3);
+  cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .projects-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .extra-info {
+    text-align: center;
+  }
+}
+
+
+/* Pricing Section */
+/* Sekce Ceny */
+/* Pricing Section */
+.section-pricing {
+  margin-top: 50px;
+  padding: 60px 20px;
+  background-color: transparent;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Skryté při načítání */
+  transition: opacity 1s ease-in-out;
+}
+
+.section-pricing.visible {
+  opacity: 1; /* Zobrazení sekce */
+}
+
+/* Pricing Cards */
+.pricing-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.pricing-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.pricing-card {
+  background-color: #333333;
+  padding: 35px;
+  width: 300px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card h3 {
+  font-size: 1.5rem;
+  color: #00ff00;
+  margin-bottom: 20px;
+}
+
+.pricing-card p {
+  color: #ccc;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 255, 0, 0.3);
+}
+
+/* Pricing Text */
+.pricing-text {
+  max-width: 800px;
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-card {
+    width: 80%;
+  }
+}
+
+
+/* Contact */
+/* Contact Section */
+.section-contact {
+  padding: 80px 40px; /* Zvýšený padding pro větší prostor */
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.section-contact {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-contact.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-contact.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* H2 */
+.section-contact h2 {
+  font-size: 3rem; /* Větší nadpis */
+  color: #00ff00;
+  margin-bottom: 50px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  position: relative;
+}
+
+/* Form */
+.contact-form {
+  width: 100%;
+  max-width: 700px; /* Zvýšená maximální šířka formuláře */
+  background-color: #333333;
+  padding: 40px; /* Zvýšený padding formuláře */
+  border-radius: 10px; /* Jemnější zaoblení */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Silnější stín */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Input Fields */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px; /* Zvýšený padding polí */
+  margin: 12px 0; /* Větší mezery mezi poli */
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem; /* Větší písmo v polích */
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: #00ff00;
+  outline: none;
+}
+
+/* Button */
+.contact-form button {
+  padding: 16px 24px; /* Větší tlačítko */
+  background-color: #00ff00;
+  color: white;
+  border: none;
+  border-radius: 6px; /* Jemnější zaoblení tlačítka */
+  cursor: pointer;
+  font-size: 1.2rem; /* Větší písmo na tlačítku */
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #008000;
+}
+
+/* Hover effect for form */
+.contact-form:hover {
+  transform: scale(1.03); /* Větší zvětšení při hoveru */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 30px;
+    width: 90%;
+  }
+
+  .section-contact h2 {
+    font-size: 2.5rem; /* Zachování větší velikosti na mobilních zařízeních */
+  }
+}
+
+/* Omně Section */
+.section-omne {
+  margin-top: -150px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  opacity: 0;  /* Sekce bude ve výchozím stavu neviditelná */
+  transition: opacity 1s ease-in-out; /* Plynulý přechod pro animaci */
+}
+
+.section-omne.visible {
+  opacity: 1;  /* Když je sekce viditelná, změní se na 100% */
+}
+
+.omne-container {
+  display: flex;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/* Left Side */
+.omne-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.omne-info h2 {
+  font-size: 2.5rem;
+  color: #00ff00;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  position: relative;
+}
+
+.omne-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Right Side */
+.omne-skills {
+  flex: 1;
+  min-width: 300px;
+}
+
+.omne-skills h3 {
+  font-size: 2rem;
+  color: #00ff00;
+  margin-bottom: 20px;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #333;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  overflow: hidden;
+}
+
+.skill-fill {
+  height: 100%;
+  background-color: #00ff00;
+  border-radius: 5px;
+  transform: scaleX(0); /* Začíná od 0% šířky */
+  transform-origin: left; /* Nastavení počátečního bodu animace */
+  transition: transform 1s ease-out; /* Plynulý přechod animace */
+}
+
+.skill-fill.animate {
+  transform: scaleX(1); /* Při animaci se šířka zvětší na 100% */
+}
+
+.skill-percentage {
+  font-size: 1rem;
+  color: #ccc;
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-omne {
+    padding: 40px 10px;
+  }
+
+  .omne-info h2 {
+    font-size: 2rem;
+  }
+
+  .omne-skills h3 {
+    font-size: 1.8rem;
+  }
+}
+* {
+  cursor: none;
 }

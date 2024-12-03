@@ -1,0 +1,76 @@
+{
+    "navbar": {
+      "home": "Home",
+      "about": "About",
+      "projects": "Projects",
+      "pricing": "Pricing",
+      "contact": "Contact",
+      "language": "Language"
+    },
+    "header": {
+    "welcome": "Welcome to my Website!",
+    "name": "My name Is Simon Melichar",
+    "job": "I am a web developer",
+    "mission": "Let's build something amazing",
+    "description": "I'm a passionate web developer with experience in building dynamic websites and applications. My goal is to create high-quality, scalable solutions. Let's work together and build something amazing!",
+    "footer": "Looking forward to connecting!"
+    },
+    "about": {
+      "title": "About Me",
+      "content": "Hi! I'm Simon, a passionate web developer based in Prague. I specialize in building fast and responsive websites with modern JavaScript frameworks like React, and backend technologies such as Node.js and Laravel. I love solving complex problems and creating user-friendly interfaces.",
+      "skills": "Skills",
+      "skillsList": "React, Node.js, Laravel, JavaScript, HTML5, CSS3, MySQL, Git, Agile methodology."
+    },
+    "omne": {
+    "title": "About Me",
+    "description": "Hi, I'm Simon Melichar, a web developer with over 10 years of experience. I specialize in creating high-quality, scalable, and user-friendly applications. My passion lies in problem-solving and building innovative solutions to help businesses thrive.",
+    "additionalInfo": "When I'm not coding, I enjoy learning new technologies, exploring the latest trends in web development, and collaborating with like-minded professionals.",
+    "skillsTitle": "Skills & Expertise"
+  
+    },
+    
+        "contact": {
+          "title": "Contact Me",
+          "namePlaceholder": "Your Name",
+          "emailPlaceholder": "Your Email",
+          "messagePlaceholder": "Your Message",
+          "submitButton": "Send Message"
+        
+      },
+      
+    
+        "pricing": {
+          "title": "Web Development Pricing",
+          "basicTitle": "Basic Website",
+          "startingAt": "Starting at",
+          "basicPrice": "10,000 CZK",
+          "basicDescription": "A simple static website with a few pages.",
+          "ecommerceTitle": "E-commerce Platform",
+          "ecommercePrice": "25,000 CZK",
+          "ecommerceDescription": "A fully functional e-commerce platform with payment integration.",
+          "customTitle": "Custom Web Application",
+          "customPrice": "40,000 CZK",
+          "customDescription": "A dynamic, interactive web application with complex functionality.",
+          "whyChooseMe": "Why Choose Me?",
+          "description1": "With over 10 years of experience in web development, I am committed to delivering solutions that meet your unique needs. I prioritize high-quality code, user-friendly design, and seamless functionality to create web applications that stand out.",
+          "description2": "I take a personalized approach to every project, ensuring that your goals are at the forefront of my work. From initial consultation to final delivery, I provide a collaborative experience to bring your vision to life.",
+          "description3": "With a focus on long-term partnerships, I offer continuous support and improvements to ensure your website or application grows with your business. Let's work together to turn your ideas into a successful digital product!"
+        
+      },
+      
+      
+        "projects": {
+          "title": "My Projects",
+          "reactTitle": "React Project",
+          "reactDescription": "This React project focuses on building a fast, interactive, and responsive single-page application (SPA) for a dynamic content management system. The goal was to create a seamless user experience with minimal loading times and smooth transitions between pages, leveraging React's component-based architecture and state management with hooks and Context API.",
+          "laravelTitle": "Laravel Project",
+          "laravelDescription": "Built using the Laravel framework, this project involved developing a custom backend API for a business management platform. I integrated secure user authentication, roles and permissions, as well as advanced data validation. Laravel's Eloquent ORM made database management straightforward, while Blade templates allowed for the creation of a clean, dynamic frontend.",
+          "cSharpTitle": "C# Project",
+          "cSharpDescription": "In this C# project, I developed a desktop application that handles inventory management for small businesses. The application is built with a focus on ease of use, data integrity, and speed. I used Windows Forms for the UI and integrated it with SQL Server for database management, enabling users to add, update, and track inventory levels in real-time.",
+          "toolsTitle": "The Importance of Using the Right Tools",
+          "toolsDescription": "Choosing the right technologies for a project is critical to its success. Whether it's React for building fast and interactive user interfaces, Laravel for robust backend systems, or C# for creating reliable desktop applications, each tool has its strengths that can make a project more efficient and scalable. I make it a point to stay up to date with the latest advancements in each technology to ensure that my projects deliver the best results for my clients.",
+          "processTitle": "From Concept to Completion",
+          "processDescription": "The journey of a project starts with understanding the client's needs, brainstorming the features, and designing the architecture. Once development begins, I focus on writing clean, maintainable code, testing thoroughly, and ensuring the user interface is intuitive and responsive. After deployment, I offer ongoing support to ensure the application continues to perform optimally as user needs evolve."
+        }
+      }
+  

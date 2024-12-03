@@ -1,0 +1,81 @@
+{
+    "navbar": {
+      "home": "Domů",
+      "about": "O Mně",
+      "projects": "Projekty",
+      "pricing": "Cenová nabídka",
+      "contact": "Kontakt",
+      "language": "Jazyk"
+    },
+    
+    
+        "header": {
+            "welcome": "Vítej na mé webové stránce!",
+          "name":"Jmenuji se Simon Melichar",
+          "job": "Jsem webový vývojář",
+          "mission": "Pojďme vytvořit něco úžasného",
+          "description": "Jsem vášnivý webový vývojář se zkušenostmi v tvorbě dynamických webových stránek a aplikací. Mým cílem je vytvářet kvalitní a škálovatelné řešení. Pojďme spolu pracovat a vytvořit něco úžasného!",
+          "footer": "Těším se na spojení!"
+        
+      },
+      
+      
+    "about": {
+      "title": "O Mně",
+      "content": "Ahoj! Jsem Simon, vášnivý webový vývojář z Prahy. Specializuji se na vývoj rychlých a responzivních webových stránek pomocí moderních JavaScriptových frameworků jako React a backendových technologií jako Node.js a Laravel. Mám rád řešení složitých problémů a vytváření uživatelsky přívětivých rozhraní.",
+      "skills": "Dovednosti",
+      "skillsList": "React, Node.js, Laravel, JavaScript, HTML5, CSS3, MySQL, Git, Agilní metodika."
+    },
+    
+        "omne": {
+          "title": "O Mně",
+          "description": "Ahoj, jsem Simon Melichar, webový vývojář s více než 10 lety zkušeností. Specializuji se na vytváření kvalitních, škálovatelných a uživatelsky přívětivých aplikací. Můj zájem spočívá v řešení problémů a budování inovativních řešení, která pomáhají firmám růst.",
+          "additionalInfo": "Když neprogramuji, rád se učím nové technologie, sleduji aktuální trendy ve webovém vývoji a spolupracuji s podobně naladěnými profesionály.",
+          "skillsTitle": "Dovednosti a Zkušenosti"
+        
+      
+    },
+    
+        "contact": {
+          "title": "Kontaktujte mě",
+          "namePlaceholder": "Vaše jméno",
+          "emailPlaceholder": "Váš e-mail",
+          "messagePlaceholder": "Vaše zpráva",
+          "submitButton": "Odeslat zprávu"
+        
+      },
+    
+        "pricing": {
+          "title": "Ceník Webového Vývoje",
+          "basicTitle": "Základní Webová Stránka",
+          "startingAt": "Cena od",
+          "basicPrice": "10,000 CZK",
+          "basicDescription": "Jednoduchá statická stránka s několika stránkami.",
+          "ecommerceTitle": "E-commerce Platforma",
+          "ecommercePrice": "25,000 CZK",
+          "ecommerceDescription": "Plně funkční e-commerce platforma s integrací plateb.",
+          "customTitle": "Custom Webová Aplikace",
+          "customPrice": "40,000 CZK",
+          "customDescription": "Dynamická, interaktivní webová aplikace s komplexní funkcionalitou.",
+          "whyChooseMe": "Proč si vybrat mě?",
+          "description1": "S více než 10 lety zkušeností v oblasti webového vývoje se zavazuji poskytovat řešení, která splňují vaše jedinečné potřeby. Priorituji kvalitní kód, uživatelsky přívětivý design a bezproblémovou funkčnost, abych vytvořil webové aplikace, které vynikají.",
+          "description2": "Každému projektu přistupuji individuálně, zajišťuji, aby vaše cíle byly v centru mé práce. Od úvodní konzultace až po finální dodání, poskytují kolaborativní zkušenost, která přivede vaši vizi k životu.",
+          "description3": "S důrazem na dlouhodobé partnerství nabízím průběžnou podporu a vylepšení, abych zajistil, že vaše webová stránka nebo aplikace roste s vaším podnikáním. Pojďme spolupracovat a přetvořit vaše nápady na úspěšný digitální produkt!"
+        },
+      
+        "projects": {
+            
+            "title": "Moje Projekty",
+            "reactTitle": "React Projekt",
+            "reactDescription": "Tento React projekt se zaměřuje na vytvoření rychlé, interaktivní a responzivní jednoúčelové aplikace (SPA) pro dynamický systém správy obsahu. Cílem bylo vytvořit plynulý uživatelský zážitek s minimálními časy načítání a plynulými přechody mezi stránkami, využívající komponentovou architekturu Reactu a správu stavu s pomocí hooků a Context API.",
+            "laravelTitle": "Laravel Projekt",
+            "laravelDescription": "Tento projekt, postavený na frameworku Laravel, zahrnoval vývoj vlastního backend API pro platformu pro správu podnikání. Integroval jsem bezpečnou autentifikaci uživatelů, role a oprávnění, stejně jako pokročilou validaci dat. Laravelův Eloquent ORM usnadnil správu databáze, zatímco Blade šablony umožnily vytvoření čistého, dynamického frontendového rozhraní.",
+            "cSharpTitle": "C# Projekt",
+            "cSharpDescription": "V tomto C# projektu jsem vyvinul desktopovou aplikaci pro správu inventáře pro malé podniky. Aplikace je navržena s důrazem na snadnost použití, integritu dat a rychlost. Použil jsem Windows Forms pro uživatelské rozhraní a integroval ji s SQL Server pro správu databáze, což umožňuje uživatelům přidávat, aktualizovat a sledovat úrovně zásob v reálném čase.",
+            "toolsTitle": "Důležitost použití správných nástrojů",
+            "toolsDescription": "Výběr správných technologií pro projekt je klíčový pro jeho úspěch. Ať už je to React pro vytváření rychlých a interaktivních uživatelských rozhraní, Laravel pro robustní backendové systémy, nebo C# pro vytváření spolehlivých desktopových aplikací, každý nástroj má své silné stránky, které mohou učinit projekt efektivnějším a škálovatelnějším. Snažím se být vždy v obraze o nejnovějších trendech v každé technologii, abych zajistil, že mé projekty přinesou nejlepší výsledky pro mé klienty.",
+            "processTitle": "Od nápadu k dokončení",
+            "processDescription": "Cesta projektu začíná pochopením potřeb klienta, brainstormingem funkcí a návrhem architektury. Jakmile vývoj začne, zaměřuji se na psaní čistého, udržovatelného kódu, důkladné testování a zajištění toho, aby uživatelské rozhraní bylo intuitivní a responzivní. Po nasazení nabízím kontinuální podporu, aby aplikace i nadále optimálně fungovala, jak se vyvíjejí potřeby uživatelů."
+          }
+        }
+  

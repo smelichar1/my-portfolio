@@ -1,0 +1,30 @@
+/* Skrýt výchozí kurzor na celé stránce */
+* {
+    cursor: none;
+  }
+  
+  /* Styl pro vlastní kurzor */
+  .cursor {
+    position: fixed; /* Kurzoru dáme fixní pozici */
+    top: 0;
+    left: 0;
+    width: 20px;  /* Menší velikost kurzoru */
+    height: 20px; /* Menší velikost kurzoru */
+    background-color: rgba(0, 255, 0, 0.3); /* Poloprůhledná zelená barva */
+    border-radius: 50%;
+    pointer-events: none; /* Aby kurzor neovlivnil interakci s prvky */
+    transition: transform 0.2s ease, width 0.2s ease, height 0.2s ease, background-color 0.3s ease;
+    z-index: 9999; /* Ujistíme se, že kurzor je na vrcholu */
+  }
+  
+  /* Zvětšení kurzoru při hoveru nad specifickými prvky */
+  .cursor-hover {
+    transform: scale(5); /* Zvětšení kurzoru na 5x */
+    background-color: rgba(0, 255, 0, 0.1); /* Zelený, ale hodně průhledný */
+  }
+  
+  /* Pro všechny interaktivní prvky (buttony, odkazy, divy s pointer) */
+  button:hover, a:hover, .cursor-target:hover, .navbar a:hover {
+    cursor: none; /* Zajistí, že náš vlastní kurzor bude aktivní */
+  }
+  
